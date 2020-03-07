@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/background.png" type="Texture" id=1]
+[ext_resource path="res://src/UserInterface/UserInterface.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://src/Screens/EndScreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets/background.png" type="Texture" id=7]
-[ext_resource path="res://assets/tileset.tres" type="TileSet" id=8]
+[ext_resource path="res://src/Objects/Portal2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Screens/EndScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Enemy.tscn" type="PackedScene" id=8]
 
 [node name="Level02" type="Node2D"]
 
@@ -17,16 +17,16 @@ layer = -1
 [node name="TextureRect" type="TextureRect" parent="BackgroundLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 7 )
+texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
 
 [node name="InterfaceLayer" type="CanvasLayer" parent="."]
 
-[node name="UserInterface" parent="InterfaceLayer" instance=ExtResource( 1 )]
+[node name="UserInterface" parent="InterfaceLayer" instance=ExtResource( 2 )]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 80, 80 )
 collision_layer = 4
 collision_mask = 0
@@ -39,87 +39,87 @@ position = Vector2( 180, 480 )
 [node name="Camera2D" parent="Player" index="0"]
 limit_right = 6080
 
-[node name="Portal2D" parent="." instance=ExtResource( 6 )]
+[node name="Portal2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 4060, 80 )
-next_scene = ExtResource( 5 )
+next_scene = ExtResource( 6 )
 
 [node name="Coins" type="Node2D" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1250, 570 )
 
-[node name="Coin2" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1250, 800 )
 
-[node name="Coin3" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1250, 680 )
 
-[node name="Coin4" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1680, 280 )
 
-[node name="Coin5" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 2270, 180 )
 
-[node name="Coin6" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin6" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 2660, 170 )
 
-[node name="Coin7" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin7" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3050, 160 )
 
-[node name="Coin8" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin8" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3440, 740 )
 
-[node name="Coin9" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin9" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3680, 740 )
 
-[node name="Coin10" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin10" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4210, 740 )
 
-[node name="Coin11" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin11" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4210, 540 )
 
-[node name="Coin12" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin12" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4480, 460 )
 
-[node name="Coin13" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin13" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5550, 630 )
 
-[node name="Coin14" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin14" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5350, 630 )
 
-[node name="Coin15" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin15" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5150, 380 )
 
-[node name="Coin16" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin16" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4920, 380 )
 
-[node name="Coin17" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin17" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5550, 140 )
 
-[node name="Coin18" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin18" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 5340, 140 )
 
-[node name="Coin19" parent="Coins" instance=ExtResource( 2 )]
+[node name="Coin19" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3330, -50 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 1800, 950 )
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 1050, 960 )
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 2550, 950 )
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 4230, 950 )
 
-[node name="Enemy5" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 5810, 960 )
 
-[node name="Enemy6" parent="Enemies" instance=ExtResource( 3 )]
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 5120, 960 )
 
 [editable path="Player"]
