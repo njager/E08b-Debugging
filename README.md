@@ -1,5 +1,7 @@
 # E08b-Debugging
 
+Bugs found and fixed as described in each commit
+
 As usual, Fork and Clone this repository.
 
 This exercise is an opportunity for you to debug syntax, interpreter, and other runtime errors in a fairly-complex project. Some of the syntax and concepts represented in this code may seem foreign or advanced, but if you work systematically, you should be able to address the problems in this code.
