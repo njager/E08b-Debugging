@@ -133,9 +133,9 @@ position = Vector2( 3800, 790 )
 position = Vector2( 5510, 800 )
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 6960.18, 226.317 )
+position = Vector2( 6974.5, 230.613 )
 
 [node name="Enemy5" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 7020, 800 )
+position = Vector2( 6513.08, 791.408 )
 
 [editable path="Player"]
